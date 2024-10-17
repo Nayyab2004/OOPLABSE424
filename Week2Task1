@@ -1,1 +1,59 @@
+//TASK 1
+#include<iostream>
+using namespace std;
+class Employee {
+private:
+ string name;
+ string jobTitle;
+ double salary;
+public:
+ Employee(string empName, std::string empJobTitle, double empSalary) {
+ name = empName;
+ jobTitle = empJobTitle;
+ salary = empSalary;
+ }
+ void updateSalary(double newSalary) {
+ salary = newSalary;
+ }
+ void displayDetails() {
+ cout << "Name: " << name <<endl;
+ cout << "Job Title: " << jobTitle <<endl;
+ cout << "Salary: " << salary <<endl;
+ }
+};
+int main() {
+ Employee emp1("Nayyab ", "Accountant", 60000);
+ cout << "Employee Details before salary update:" << endl;
+ emp1.displayDetails();
+ emp1.updateSalary(65000);
+ cout << "\nEmployee Details after salary update:" <<endl;
+ emp1.displayDetails();
+ return 0;
+}
 
+//TASK 2
+#include <iostream>
+using namespace std;
+class Car {
+private:
+ string name;
+ float topSpeed;
+ int modelName;
+public:
+
+ Car(string Name, float TopSpeed, int ModelName) {
+ name = Name;
+ topSpeed = TopSpeed;
+ modelName = ModelName;
+ }
+ void display() {
+ cout << "The name of car is" << name << endl;
+ cout << "Speed of the car is " << topSpeed << endl;
+ cout << "Model of the car is " << modelName << endl;
+ }
+};
+int main()
+ Car c("BMW", 345.00, 2016);
+ c.display()
+ return 0;
+}
