@@ -1,1 +1,109 @@
+//Task 1
+package main;
+
+public class Movie {
+    private String title;
+private String director;
+private int releaseyear;
+public String getTitle(){
+    return title;
+}
+public void setTitle(String title){
+    this.title=title;
+}
+public String getDirector(){
+    return director;
+}
+public void setDirector(String director){
+    this.director=director;
+}
+public int getReleaseyear(){
+    return releaseyear;
+}
+public void setReleaseyear(int releaseyear){
+    this.releaseyear=releaseyear;
+}
+
+}
+package main;
+
+
+public class Main {
+
+    
+    public static void main(String[] args) {
+        Movie movie=new Movie();
+        movie.setTitle("beginn");
+        movie.setDirector("nayyab");
+        movie.setReleaseyear(2016);
+        System.out.println("Movie title:"+ movie.getTitle());
+        System.out.println("director:"+ movie.getDirector());
+        System.out.println("Release year:"+ movie.getReleaseyear());
+       
+    }
+}
+//TASK 2
+
+package appliance;
+
+/**
+ *
+ * @author Riphah
+ */
+public class Appliance {
+    private String brand;
+    private String model;
+    private int powerConsumption;
+
+    public Appliance(String brand, String model, int powerConsumption) {
+        this.brand = brand;
+        this.model = model;
+        this.powerConsumption = powerConsumption;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getPowerConsumption() {
+        return powerConsumption;
+    }
+}
+package appliance;
+
+
+public class Refrigerator extends Appliance {
+    private int capacity;
+    public Refrigerator(String brand,String model,int powerConsumption,int capacity){
+        super(brand, model, powerConsumption);
+        this.capacity = capacity;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+    }
+    package appliance;
+
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an object of the Refrigerator class
+        Refrigerator fridge = new Refrigerator("pell", "pe222222", 900, 32);
+
+        // Display the details using getter methods
+        System.out.println("Brand: " + fridge.getBrand());
+        System.out.println("Model: " + fridge.getModel());
+        System.out.println("Power Consumption: " + fridge.getPowerConsumption());
+        System.out.println("Capacity: " + fridge.getCapacity());
+    }  
+}
 
